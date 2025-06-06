@@ -10,7 +10,7 @@ function Filter() {
 
     return (
         <select
-            className="select bg-base-200 border-none shadow-none h-12 w-64 lg:w-48"
+            className="select bg-base-200 border-none shadow-md h-12 w-64 lg:w-48"
             onChange={handleFilterChange}
             defaultValue="all"
         >

@@ -17,7 +17,7 @@ function Searchbar() {
     }
 
     return (
-        <label className="input w-full h-12 px-8 bg-base-200 border-none shadow-none lg:w-96">
+        <label className="input w-full h-12 px-8 bg-base-200 border-none shadow-md lg:w-96">
             <svg
                 className="h-[1em] text-base-content"
                 xmlns="http://www.w3.org/2000/svg"

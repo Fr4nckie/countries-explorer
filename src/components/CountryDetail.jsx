@@ -52,7 +52,7 @@ function CountryDetail() {
                     <img
                         src={country.flags.png}
                         alt={country.flags.alt}
-                        className="w-full h-fit mb-8 lg:w-2xl lg:mb-0"
+                        className="w-full h-fit mb-8 lg:w-2xl lg:mb-0 shadow border border-gray-300 rounded dark:border-none"
                     />
                 </picture>
                 <div className="w-full">

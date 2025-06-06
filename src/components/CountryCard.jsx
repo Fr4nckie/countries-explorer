@@ -7,7 +7,7 @@ function CountryCard({ country }) {
     }
 
     return (
-        <div className="card bg-base-200 shadow-sm w-76 h-full md:w-full">
+        <div className="card bg-base-200 shadow-md w-76 h-full md:w-full">
             <figure>
                 <img
                     src={country.flags.png}
