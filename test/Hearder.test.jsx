@@ -1,17 +1,12 @@
 import { describe, expect, it } from 'vitest'
 import Header from '../src/components/Header.jsx'
-import { renderWithProviders } from './helper.js'
-import { MemoryRouter } from 'react-router-dom'
 import userEvent from '@testing-library/user-event'
 import { screen } from '@testing-library/dom'
+import { renderWithProviders } from './renderWithProviders.jsx'
 
 describe('<Header>', () => {
     it('should render correctly', () => {
-        const { container } = renderWithProviders(
-            <MemoryRouter>
-                <Header />
-            </MemoryRouter>
-        )
+        const { container } = renderWithProviders(<Header />)
 
         expect(container.firstChild).toMatchInlineSnapshot(`
           <div
@@ -58,11 +53,7 @@ describe('<Header>', () => {
         document.documentElement.removeAttribute('data-theme')
         localStorage.removeItem('theme')
 
-        renderWithProviders(
-            <MemoryRouter>
-                <Header />
-            </MemoryRouter>
-        )
+        renderWithProviders(<Header />)
 
         expect(document.documentElement.getAttribute('data-theme')).toBe(
             'darkcustom'
