@@ -4,13 +4,12 @@ function Filter() {
     const { filter, setFilter } = useCountryFilter()
 
     const handleFilterChange = (e) => {
-        const filter = e.target.value
-        setFilter((prev) => (filter == prev ? 'all' : filter))
+        setFilter(e.target.value)
     }
 
     return (
         <select
-            className="select bg-base-200 border-none shadow-md h-12 w-64 lg:w-48"
+            className="select bg-base-200 border-none shadow-md h-12 w-64 lg:w-48 cursor-pointer"
             onChange={handleFilterChange}
             defaultValue="all"
         >
