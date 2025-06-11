@@ -1,6 +1,6 @@
 function ErrorComponent({ error }) {
     return (
-        <div className="">
+        <div data-testid="error-testid">
             <div role="alert" className="alert alert-error">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

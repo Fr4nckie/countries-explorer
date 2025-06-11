@@ -25,6 +25,8 @@ function CountryDetail() {
         }
     }, [country])
 
+    useEffect(() => console.log(country), [country])
+ 
     if (isLoading) return <LoadingOverlay />
     if (isError) return <ErrorComponent error={error} />
 

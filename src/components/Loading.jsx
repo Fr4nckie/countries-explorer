@@ -1,5 +1,9 @@
 function Loading() {
-    return <span className="loading loading-spinner loading-md"></span>
+    return (
+        <span role="status" className="loading loading-spinner loading-md">
+            loading
+        </span>
+    )
 }
 
 export default Loading
