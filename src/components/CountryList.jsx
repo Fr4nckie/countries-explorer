@@ -12,7 +12,7 @@ function CountryList() {
     const observerRef = useRef(null)
 
     const loadMore = useCallback(() => {
-        if (!countries || countries.length === 0) return
+        // if (!countries || countries.length === 0) return
         setVisibleCount((prev) => Math.min(prev + 10, countries.length))
     }, [countries])
 
@@ -65,7 +65,6 @@ function CountryList() {
                 <ErrorComponent error={error} />
             </div>
         )
-    if (!countries) return null
 
     const hasMoreToLoad = countries.length > visibleCount
     const displayedCountries = countries.slice(0, visibleCount)
@@ -82,6 +81,7 @@ function CountryList() {
 
             {hasMoreToLoad && (
                 <div
+                    role="status"
                     ref={loaderRef}
                     className="w-full h-12 flex items-center justify-center"
                 >
