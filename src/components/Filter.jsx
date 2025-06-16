@@ -11,7 +11,7 @@ function Filter() {
         <select
             className="select bg-base-200 border-none shadow-md h-12 w-64 lg:w-48 cursor-pointer"
             onChange={handleFilterChange}
-            defaultValue="all"
+            value={filter}
         >
             <option disabled={filter === 'all'} value="all">
                 {filter == 'all' ? 'Filter by Region' : 'All'}
